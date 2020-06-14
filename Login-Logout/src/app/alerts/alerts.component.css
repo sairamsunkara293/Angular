@@ -1,0 +1,11 @@
+mat-chip {
+  max-width: 360px;
+}
+.success {
+  background-color: #4caf50 !important;
+  color: #fff;
+}
+.warning {
+  background-color: #f44336 !important;
+  color: #fff;
+}

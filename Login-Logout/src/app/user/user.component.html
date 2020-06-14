@@ -1,0 +1,22 @@
+<div class="center">
+  <mat-card>
+    <app-alerts></app-alerts>
+    <div class="d-flex align-items-center justify-content-center">
+      <h3
+        routerLink="/login"
+        routerLinkActive="active"
+        class="underlineHover pr-2"
+      >
+        login
+      </h3>
+      <h3
+        routerLink="/sign-up"
+        routerLinkActive="active"
+        class="underlineHover"
+      >
+        Sing-Up
+      </h3>
+    </div>
+    <router-outlet></router-outlet>
+  </mat-card>
+</div>

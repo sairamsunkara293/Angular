@@ -1,0 +1,85 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+.basic-container {
+  padding: 30px;
+}
+.version-info {
+  font-size: 8px;
+  float: right;
+  margin: 8px;
+}
+button:focus {
+  outline: none;
+}
+h3:focus {
+  outline: none;
+}
+
+.center {
+  display: flex;
+  background-color: #f8f9fa;
+  justify-content: center;
+  height: 100vh;
+}
+
+.center mat-card {
+  align-self: center;
+}
+/* .wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+#formContent {
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+  background: #fff;
+  padding: 30px;
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+  padding: 0px;
+  -webkit-box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.3);
+  text-align: center;
+} */
+.underlineHover:after {
+  display: block;
+  left: 0;
+  bottom: -10px;
+  width: 0;
+  height: 2px;
+  background-color: #56baed;
+  content: "";
+  transition: width 0.2s;
+}
+
+.underlineHover:hover {
+  color: #0d0d0d;
+}
+
+.underlineHover:hover:after {
+  width: 100%;
+}
+
+/* TABS */
+
+h3.inactive {
+  color: #cccccc;
+}
+
+h3.active {
+  color: #0d0d0d;
+  border-bottom: 2px solid #5fbae9;
+}

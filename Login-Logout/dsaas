@@ -1,0 +1,98 @@
+[1mdiff --git a/angular.json b/angular.json[m
+[1mindex 0ab9b73..5ceb3de 100644[m
+[1m--- a/angular.json[m
+[1m+++ b/angular.json[m
+[36m@@ -19,12 +19,10 @@[m
+             "polyfills": "src/polyfills.ts",[m
+             "tsConfig": "tsconfig.app.json",[m
+             "aot": true,[m
+[31m-            "assets": [[m
+[31m-              "src/favicon.ico",[m
+[31m-              "src/assets"[m
+[31m-            ],[m
+[32m+[m[32m            "assets": ["src/favicon.ico", "src/assets"],[m
+             "styles": [[m
+[31m-              "src/styles.css"[m
+[32m+[m[32m              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",[m
+[32m+[m[32m              "src/styles.scss"[m
+             ],[m
+             "scripts": [][m
+           },[m
+[36m@@ -83,11 +81,9 @@[m
+             "polyfills": "src/polyfills.ts",[m
+             "tsConfig": "tsconfig.spec.json",[m
+             "karmaConfig": "karma.conf.js",[m
+[31m-            "assets": [[m
+[31m-              "src/favicon.ico",[m
+[31m-              "src/assets"[m
+[31m-            ],[m
+[32m+[m[32m            "assets": ["src/favicon.ico", "src/assets"],[m
+             "styles": [[m
+[32m+[m[32m              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",[m
+               "src/styles.css"[m
+             ],[m
+             "scripts": [][m
+[36m@@ -101,9 +97,7 @@[m
+               "tsconfig.spec.json",[m
+               "e2e/tsconfig.json"[m
+             ],[m
+[31m-            "exclude": [[m
+[31m-              "**/node_modules/**"[m
+[31m-            ][m
+[32m+[m[32m            "exclude": ["**/node_modules/**"][m
+           }[m
+         },[m
+         "e2e": {[m
+[36m@@ -119,6 +113,15 @@[m
+           }[m
+         }[m
+       }[m
+[31m-    }},[m
+[31m-  "defaultProject": "support"[m
+[32m+[m[32m    }[m
+[32m+[m[32m  },[m
+[32m+[m[32m  "defaultProject": "support",[m
+[32m+[m[32m  "cli": {[m
+[32m+[m[32m    "analytics": "4c5f9d54-42d4-43df-8b8c-53be634b2651"[m
+[32m+[m[32m  },[m
+[32m+[m[32m  "schematics": {[m
+[32m+[m[32m    "@schematics/angular:component": {[m
+[32m+[m[32m      "styleext": "scss"[m
+[32m+[m[32m    }[m
+[32m+[m[32m  }[m
+ }[m
+[1mdiff --git a/package-lock.json b/package-lock.json[m
+[1mindex 634edee..263252c 100644[m
+[1m--- a/package-lock.json[m
+[1m+++ b/package-lock.json[m
+[36m@@ -205,6 +205,22 @@[m
+       "resolved": "https://registry.npmjs.org/@angular/animations/-/animations-9.1.9.tgz",[m
+       "integrity": "sha512-qWVi0TxmU6HeXAgEsfpQvFFygh+a0kH2kGe6bWij4XvG6dWfV3xZjlaFwSIYGk+yK4yL0+9+PAXH+ENfxNw+Cw=="[m
+     },[m
+[32m+[m[32m    "@angular/cdk": {[m
+[32m+[m[32m      "version": "9.2.4",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@angular/cdk/-/cdk-9.2.4.tgz",[m
+[32m+[m[32m      "integrity": "sha512-iw2+qHMXHYVC6K/fttHeNHIieSKiTEodVutZoOEcBu9rmRTGbLB26V/CRsfIRmA1RBk+uFYWc6UQZnMC3RdnJQ==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "parse5": "^5.0.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "parse5": {[m
+[32m+[m[32m          "version": "5.1.1",[m
+[32m+[m[32m          "resolved": "https://registry.npmjs.org/parse5/-/parse5-5.1.1.tgz",[m
+[32m+[m[32m          "integrity": "sha512-ugq4DFI0Ptb+WWjAdOK16+u/nHfiIrcE+sh8kZMaM0WllQKLI9rOUq6c2b7cwPkXdzfQESqvoqK6ug7U/Yyzug==",[m
+[32m+[m[32m          "optional": true[m
+[32m+[m[32m        }[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "@angular/cli": {[m
+       "version": "9.1.6",[m
+       "resolved": "https://registry.npmjs.org/@angular/cli/-/cli-9.1.6.tgz",[m
+[36m@@ -476,6 +492,11 @@[m
+       "integrity": "sha512-yT6HPpdAe2mD9HRoTCiWFog1MRJt+0j+CLbI/Ql7C6pH6vbjmfsJ55xMmQ7eS6trsnebpMWTUv1f2GRykv3ygw==",[m
+       "dev": true[m
+     },[m
+[32m+[m[32m    "@angular/material": {[m
+[32m+[m[32m      "version": "9.2.4",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/@angular/material/-/material-9.2.4.tgz",[m
+[32m+[m[32m      "integrity"

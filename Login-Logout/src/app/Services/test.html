@@ -1,0 +1,23 @@
+<div>
+
+<!-- knowledge base Split dropdown starts here -->
+    <b-button-group>
+        <b-button variant="outline-primary" @click="open_modal('kb_categories', 'd')">Add Category</b-button>
+        <b-dropdown right variant="outline-secondary split-icon">
+            <b-dropdown-item @click="open_modal('sections', 'd')">Add section</b-dropdown-item>
+            <b-dropdown-item @click="open_modal('kb_details', 'v')">Add Article</b-dropdown-item>
+        </b-dropdown>
+    </b-button-group>
+<!-- knowledge base Split dropdown ends here -->
+
+<!-- modal  starts here-->
+    <b-modal id="support-knowledge-category" hide-footer :title="'Add '+title">
+
+    <!-- appup-form starts here to render different types of form fields based on entities -->
+        <appup-form :formJson="form_fields" ref="support-knowledge-category-form-ref" submit="knowledge_submit" class="mt-3" :key="form_render"> </appup-form>
+      <!-- appup-form ends here to render different types of form fields based on entities -->
+      
+    </b-modal>
+<!-- modal  ends here-->
+
+</div>

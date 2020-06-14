@@ -1,0 +1,9 @@
+<mat-chip-list
+  *ngIf="message"
+  class="mat-chip-list-stacked"
+  aria-label="Color selection"
+>
+  <mat-chip [ngClass]="message.cssClass" class="justify-content-center mb-2">
+    {{ message.text }}
+  </mat-chip>
+</mat-chip-list>
